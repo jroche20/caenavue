@@ -218,7 +218,7 @@
                       </div>
                   </div>
               </div>
-              <a href="#" class="continue">Save & Continue</a>
+              <a href="javascript:void(0)" @click="submitForm" class="continue">Save & Continue</a>
             </form>
           </div>
       </div>
@@ -227,6 +227,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'Form',
   data () {
@@ -255,14 +256,14 @@ export default {
   },
   methods: {
     submitForm () {
-      this.axios.post('/contact', this.form)
+      axios.post('api.php', this.form)
         .then((res) => {
-          alert('success')
+          console.log(this.form.company)
         })
         .catch((error) => {
-          alert(error.response.status)
+          console.log(error.response.status)
         }).finally(() => {
-          alert('finally')
+          console.log('thanks for submitting')
         })
     }
   }
