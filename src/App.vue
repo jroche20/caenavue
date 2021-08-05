@@ -34,7 +34,7 @@
         </nav>
         <div class="maincontainer">
             <h1>Questionnaire</h1>
-            <form id="signup-form" @submit.prevent="processForm">
+            <form id="signup-form" @submit.prevent="submitForm">
               <div class="companyinfo">
                   <section class="sectionhead">
                     <img src="@/assets/sectionicon.svg" alt="section graphic" class="sectionlogo">
@@ -254,9 +254,6 @@ export default {
     }
   },
   methods: {
-    processForm () {
-      console.log({ company: this.company })
-    },
     submitForm () {
       this.axios.post('/contact', this.form)
         .then((res) => {
