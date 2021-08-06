@@ -168,7 +168,7 @@
                   <section class="sectionhead">
                       <img src="@/assets/sectionicon.svg" alt="section graphic" class="sectionlogo">
                       <div class="sectionheadtext">
-                        <h3 class="header">Fundraise & Traction</h3>
+                        <h3 class="header">Fundraise &amp; Traction</h3>
                         <p class="companydescript">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                       </div>
                   </section>
@@ -218,7 +218,7 @@
                       </div>
                   </div>
               </div>
-              <a href="javascript:void(0)" @click="submitForm" class="continue">Save & Continue</a>
+              <a href="javascript:void(0)" @click="submitForm" class="continue">Save &amp; Continue</a>
             </form>
           </div>
       </div>
@@ -256,7 +256,7 @@ export default {
   },
   methods: {
     submitForm () {
-      axios.post('api.php', this.form)
+      axios.post('databases/api.php', this.form)
         .then((res) => {
           console.log(this.form.company)
         })
