@@ -256,12 +256,12 @@ export default {
   },
   methods: {
     submitForm () {
-      axios.post('databases/api.php', this.form)
+      axios.post('http://localhost:8080/databases/api.php', this.form)
         .then((res) => {
           console.log(this.form.company)
         })
         .catch((error) => {
-          console.log(error.response.status)
+          console.log(error)
         }).finally(() => {
           console.log('thanks for submitting')
         })
